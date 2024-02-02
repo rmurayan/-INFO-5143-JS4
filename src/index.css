@@ -75,6 +75,16 @@ button
   vertical-align: baseline;
   width: auto;
 }
+button:disabled {
+  background-color: rgb(12, 11, 11);
+  color: #fdfbfb; 
+  cursor: not-allowed; 
+}
+button:disabled:hover,
+button:disabled:focus {
+  background-color: #0e0d0d;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
 .statusComplete{
   color: green;
   font-size: 20px;
@@ -116,6 +126,7 @@ button:active {
   box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
   transform: translateY(0);
 }
+
 .input_form{
   display: flex;
   align-items: center;
@@ -148,5 +159,7 @@ input[type="text"] , select{
   align-items: center;
   justify-content: center ;
 }
+
+
 
 

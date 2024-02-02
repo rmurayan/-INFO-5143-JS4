@@ -32,30 +32,28 @@ export default function Form({ title, addNewTaskHandler }) {
   };
 
   return (
-    <form onSubmit={onSubmitHander} className ="formCon">
-      <h2 style={{ textAlign: "center" }} 
-      className ="tasks_status">
+    <form onSubmit={onSubmitHander} className="formCon">
+      <h2 style={{ textAlign: "center", fontSize: "35px", color: "green" }}>
         {title}
       </h2>
-      {descriptionIsEmpty && <h2>** Enter a description</h2>}
       <div className="input_form">
-        <div className="text-input"> 
+        <div className="text-input">
           <label htmlFor="description">
-            Description
+            <b>Description</b>
             <input
               type="text"
               name="description"
               id="description"
               maxLength={150}
               value={description}
-              placeholder="Try typing something in here"
+              placeholder="Typing description in here"
               onChange={inputDescriptionChangeHandler}
             />
           </label>
         </div>
         <div className="text-input">
           <label htmlFor="status" className="select">
-            Status :
+            <b>Status:</b>
             <select
               name="status"
               value={status}
@@ -71,6 +69,9 @@ export default function Form({ title, addNewTaskHandler }) {
           Reset
         </button>
       </div>
+      {descriptionIsEmpty && (
+        <h2 style={{ color: "red" }}>** Enter a description **</h2>
+      )}
     </form>
   );
 }
