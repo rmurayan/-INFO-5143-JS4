@@ -1,8 +1,8 @@
 export default function Header() {
   return (
-    <>
-      <div>Todo App</div>
-      <div>by Raid Murayan</div>
-    </>
+    <header>
+      <div className="hearder_title">Todo App</div>
+      <div className="header_author">by Raid Murayan</div>
+    </header>
   );
 }
